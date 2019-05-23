@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/time_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="0:00:00"
+        android:textSize="92dp"/>
+
+    <Button
+        android:id="@+id/start_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="OnStartBtnClick"
+        android:text="Start"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/reset_btn"
+        app:layout_constraintTop_toBottomOf="@id/time_view"
+        />
+
+    <Button
+        android:id="@+id/stop_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        app:layout_constraintLeft_toRightOf="@id/reset_btn"
+        app:layout_constraintTop_toBottomOf="@id/time_view"
+        app:layout_constraintRight_toRightOf="parent"
+        android:onClick="OnStopBtnClick"
+        />
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        app:layout_constraintLeft_toRightOf="@id/start_btn"
+        app:layout_goneMarginLeft="15dp"
+
+        app:layout_constraintTop_toBottomOf="@id/time_view"
+
+        app:layout_constraintRight_toLeftOf="@id/stop_btn"
+        app:layout_goneMarginRight="15dp"
+        android:onClick="OnResetBtnClick"/>
+
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextActivity"
+        android:text="Next"
+
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_goneMarginRight ="15dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_goneMarginBottom="15dp"
+        />
+
+
+
+</android.support.constraint.ConstraintLayout>
